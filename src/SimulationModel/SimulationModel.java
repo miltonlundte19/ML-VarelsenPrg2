@@ -15,8 +15,12 @@ import java.util.ArrayList;
 public class SimulationModel {
     Scene scene;
     Cell c;
+    Cell x;
+    Cell ii;
     public SimulationModel() {
         c = new Cell(2,2);
+        x = new Cell(5,5);
+        ii = new Cell(8,3);
     }
     public void update() {
         c.update();
@@ -25,6 +29,8 @@ public class SimulationModel {
     public ArrayList<Shape> getShapes() {
         ArrayList<Shape> shapes = new ArrayList<>();
         shapes.add(c.getShape());
+        shapes.add(x.getShape());
+        shapes.add(ii.getShape());
         return shapes;
     }
 
