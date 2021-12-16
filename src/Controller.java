@@ -27,7 +27,7 @@ public class Controller implements Runnable{
     public Controller() {
         viewNative = new ScreenRenderer(width,height,scale);
         //viewSprite = new ScreenRenderer(width,height,scale);
-        model = new SimulationModel();
+        model = new SimulationModel(width/scale, height/scale);
         // Frame data
         frameNative = new JFrame(title+"Native");
         frameNative.add(viewNative);
